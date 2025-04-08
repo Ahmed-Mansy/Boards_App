@@ -1,22 +1,14 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
-    <link rel="stylesheet" href="{%static 'css/style.css'%}">
-    <title>{{board.name}}</title>
-</head>
+{% block title%}
+{{board.name}}
+{%endblock%}
 
-<body>
-    <div class="container my-5">
-        <ol class="breadcrumb my-4 bg-light py-3 fs-5">
-            <li class="breadcrumb-item"><a href="{% url 'home' %}"> Boards</a></li>
-            <li class="breadcrumb-item active">{{board.name}}</li>
-        </ol>
-    </div>
-</body>
+{% block breadcrump%}
+<li class="breadcrumb-item"><a href="{% url 'home' %}"> Boards</a></li>
+<li class="breadcrumb-item active">{{board.name}}</li>
+{%endblock%}
 
-</html>
+{% block content%}
+Topics Content
+{%endblock%}
