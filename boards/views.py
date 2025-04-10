@@ -36,8 +36,8 @@ def new_topic(req,board_id):
             topic = topic,
             created_by = user
         )
+        
         return redirect('board_topics',board_id=board.pk)
-    
     
     return render(req,'new_topic.html',{'board':board})
 

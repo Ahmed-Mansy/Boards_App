@@ -1,3 +1,41 @@
-.new-shadow{
+.new-shadow {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.new-shadow-s {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bg {
+    background-color: rgb(18, 95, 95);
+}
+
+a {
+    color: #6c757d;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+.breadcrumb-item.active {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.board-table a {
+    color: black;
+}
+
+.board-table a:hover {
+    color: #009cab;
+}
+
+td {
+    padding: 15px !important;
+}
+
+tr:nth-child(even) td {
+    background-color: #ffffff;
 }

@@ -11,30 +11,35 @@
 
 {% block content%}
 
-<table class="table new-shadow">
+<div class="table new-shadow-s p-4">
+    <table class="table  ">
 
-    <thead class="table-dark fs-5">
-        <th>Topics</th>
-        <th>Created By</th>
-        <th>Posts</th>
-        <th>Views</th>
-        <th>Created date</th>
-    </thead>
-    <tbody>
-        {% for topic in board.topics.all %}
-        
-        <tr>
-            <td>{{topic.subject}}</td>
-            <td>{{topic.created_by}}</td>
-            <td>0</td>
-            <td>0</td>
-            <td>{{topic.created_dt}}</td>
-        </tr>
-        
-        {%endfor%}
-    </tbody>
+        <thead class="table-dark fs-5">
+            <th>Topics</th>
+            <th>Created By</th>
+            <th>Posts</th>
+            <th>Views</th>
+            <th>Created date</th>
+        </thead>
+        <tbody>
+            {% for topic in board.topics.all %}
+            
+            <tr>
+                <td>{{topic.subject}}</td>
+                <td>{{topic.created_by}}</td>
+                <td>0</td>
+                <td>0</td>
+                <td>{{topic.created_dt}}</td>
+            </tr>
+    
+            {%endfor%}
+        </tbody>
+    
+    
+    
+    
+    </table>
+</div>
 
-</table>
-
-
+<a class="btn btn-primary new-shadow" href="{% url 'new_topic' board.id %}">New Topic</a>
 {%endblock%}
