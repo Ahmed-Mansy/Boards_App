@@ -8,7 +8,19 @@ Signup
 
 
 
-{% block content %}
-<h1>signup</h1>
+{% block body %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="w-50 p-5 new-shadow-s  ">
+        <h1 class="text-center">Sign Up</h1>
+
+        <form method="post" novalidate>
+
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-dark w-100">Sign Up</button>
+
+        </form>
+    </div>
+</div>
 
 {%endblock%}
