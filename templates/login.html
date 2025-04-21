@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block title%}
 Signup
 {%endblock%}
@@ -11,17 +10,19 @@ Signup
 {% block body %}
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="w-50 p-5 new-shadow-s  ">
-        <h1 class="text-center">Sign Up</h1>
+        <h1 class="text-center">Login</h1>
 
         <form method="post" novalidate>
 
             {%csrf_token%}
-            {{form.as_p}}
-            <button type="submit" class="btn btn-dark w-100">Sign Up</button>
+            
+            {% include 'includes/form.html' %}
+
+            <button type="submit" class="btn btn-dark w-100 mt-3">Login</button>
 
         </form>
         <div class="card-footer text-muted text-center mt-3">
-            Already have account? <a class="text-dark" href="{% url 'login' %}">Log in</a>
+            Create new account <a class="text-dark" href="{% url 'signup'%}">Sign up</a>
         </div>
     </div>
     
