@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}
+{{topic.subject}}
+{%endblock%}
+
+{% block breadcrump%}
+<li class="breadcrumb-item"><a href="{% url 'home' %}"> Boards</a></li>
+<li class="breadcrumb-item"><a href="{% url 'board_topics' topic.board.pk %}">{{topic.board.name}}</a></li>
+<li class="breadcrumb-item">{{topic.subject}}</li>
+<li class="breadcrumb-item active">Post reply</li>
+{%endblock%}
+
+{% block content%}
+
+
+<form method="post" class="mb-4">
+
+    {% csrf_token%}
+
+    {% include 'includes/form.html'%}
+    <button type="submit" class="btn btn-primary my-3">Post a reply</button>
+</form>
+
+
+{%for post in topic.posts.all %}
+<div class="new-shadow-s p-4 my-4">
+
+
+    <div class="row align-items-center">
+
+        <div class="image col-1 text-center">
+            <img src="{% static 'imgs/user.png' %}" alt="{{post.created_by.username}}" class="w-100">
+            <small class="fw-bold">{{post.created_by.username}}</small>
+        </div>
+        <div class="col-10">
+            <p>{{post.message}}</p>
+            <p>{{post.created_dt}}</p>
+            {%if post.created_by == user%}
+            <a href="#" class="btn btn-bg ">Edit</a>
+            {%endif%}
+        </div>
+    </div>
+
+
+</div>
+    {%endfor%}
+
+
+{%endblock%}

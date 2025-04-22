@@ -10,6 +10,17 @@
     background-color: rgb(18, 95, 95);
 }
 
+.btn-bg{
+    background-color: rgb(18, 95, 95);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-bg:hover{
+    color: #fff;
+    background-color: rgb(13, 127, 127);
+
+
+}
 a {
     color: #6c757d;
     text-decoration: none;
@@ -24,11 +35,11 @@ a:hover {
     color: #ffffff;
 }
 
-.board-table a {
+.table a {
     color: black;
 }
 
-.board-table a:hover {
+.table a:hover {
     color: #009cab;
 }
 
