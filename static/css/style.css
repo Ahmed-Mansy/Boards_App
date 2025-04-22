@@ -18,9 +18,18 @@
 .btn-bg:hover{
     color: #fff;
     background-color: rgb(13, 127, 127);
-
-
 }
+.btn-outline-primary {
+    color: rgb(13, 127, 127);
+    border-color: rgb(13, 127, 127);
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color:  rgb(13, 127, 127);
+    border-color:  rgb(13, 127, 127);
+}
+
 a {
     color: #6c757d;
     text-decoration: none;

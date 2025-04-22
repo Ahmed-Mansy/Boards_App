@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
@@ -13,6 +14,7 @@
             Home
         {%endblock%}
     </title>
+
 </head>
 
 <body class="bg-light">
@@ -55,8 +57,8 @@
                     </ul>
                 </div>
                 {%else%}
-                <a href="{% url 'login'%}" class=" btn btn-outline-primary mx-2">Login</a>
-                <a href="{% url 'signup'%}" class=" btn btn-primary mx-2">Signup</a>
+                <a href="{% url 'login'%}" class=" btn btn-outline-primary  mx-2">Login</a>
+                <a href="{% url 'signup'%}" class=" btn btn-bg mx-2">Signup</a>
                 {%endif%}
             </div>
         </div>
