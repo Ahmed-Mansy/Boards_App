@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title%}
-Signup
+Sign up
 {%endblock%}
 
 
@@ -10,7 +10,7 @@ Signup
 {% block body %}
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="w-50 p-5 new-shadow-s  ">
-        <h1 class="text-center">Login</h1>
+        <h1 class="text-center">Log in</h1>
 
         <form method="post" novalidate>
 
@@ -18,7 +18,7 @@ Signup
             <input type="hidden" name="next" value="{{next}}">
             {% include 'includes/form.html' %}
 
-            <button type="submit" class="btn btn-dark w-100 mt-3">Login</button>
+            <button type="submit" class="btn btn-dark w-100 mt-3">Log in</button>
 
         </form>
         <div class="card-footer text-muted text-center mt-3">

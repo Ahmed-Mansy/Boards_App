@@ -18,11 +18,12 @@ New Topic
 
     {% csrf_token %}
 
+
     <label for="id_subject" class="form-label my-3">Subject</label>
-    <input class="form-control" type="text" name="subject" id="id_subject">
+    <input class="form-control" type="text" name="subject" id="id_subject" required>
 
     <label class="form-label my-3" for="message">Message</label>
-    <textarea class="form-control" name="message" id="id_message" rows="5"></textarea>
+    <textarea class="form-control" name="message" id="id_message" rows="5" required></textarea>
     <button type="submit" class="btn btn-success my-3 px-5">Add</button>
 
 
